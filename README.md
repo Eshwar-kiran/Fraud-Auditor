@@ -118,42 +118,55 @@ python manage.py runserver
 * Interactive Dashboards
 * Enhanced Reporting & Analytics
 
-# 👨‍💻 Author
+# 📸 Screenshots
+
+## 🏠 Home Page
+
+![Home Page](https://github.com/Eshwar-kiran/Fraud-Auditor/blob/main/screenshots/Home_page.png)
+
+## 👤 User Registration
+
+![User Registration](https://github.com/Eshwar-kiran/Fraud-Auditor/blob/main/screenshots/user_registration.png)
+
+## 🔐 User Login
+
+![User Login](https://github.com/Eshwar-kiran/Fraud-Auditor/blob/main/screenshots/user_login.png)
+
+## 📝 Healthcare Claim Prediction
+
+![Prediction](https://github.com/Eshwar-kiran/Fraud-Auditor/blob/main/screenshots/user_predicts_claim_fraud.png)
+
+## ✅ Prediction Result
+
+![Prediction Result](https://github.com/Eshwar-kiran/Fraud-Auditor/blob/main/screenshots/predicted_result_of_insurance_claim.png)
+
+## 📊 Service Provider Login
+
+![Login](https://github.com/Eshwar-kiran/Fraud-Auditor/blob/main/screenshots/serviceprovider_login.png)
+
+## 📊 Service Provider Dashboard
+
+![dashboard](https://github.com/Eshwar-kiran/Fraud-Auditor/blob/main/screenshots/admin_dashboard.png)
+
+## 📈 Fraud Prediction Ratio
+
+![Fraud Ratio](https://github.com/Eshwar-kiran/Fraud-Auditor/blob/main/screenshots/admin_view_fraudratio.png)
+
+## 📉 Model accuracy check
+
+![accuracy](https://github.com/Eshwar-kiran/Fraud-Auditor/blob/main/screenshots/admin_train_and_check_accuracy_of_model.png)
+
+## 📊 Admin views predicted data
+
+![viewdata](https://github.com/Eshwar-kiran/Fraud-Auditor/blob/main/screenshots/admin_can_view_predicted_data.png)
+
+## 📊 Admin downloads predicted data
+
+![downloaddata](https://github.com/Eshwar-kiran/Fraud-Auditor/blob/main/screenshots/admin_download_predicted_dataset.png)
 
 **Eshwar Kiran Kadali**
 
 If you found this project useful, consider giving it a ⭐ on GitHub.
 
-# 📸 Screenshots
 
-## 🏠 Home Page
 
-![Home Page](images/home.png)
-
-## 🔐 User Login
-
-![User Login](images/login.png)
-
-## 👤 User Registration
-
-![User Registration](images/register.png)
-
-## 📝 Healthcare Claim Prediction
-
-![Prediction](images/prediction.png)
-
-## ✅ Prediction Result
-
-![Prediction Result](images/result.png)
-
-## 📊 Service Provider Dashboard
-
-![Dashboard](images/dashboard.png)
-
-## 📈 Fraud Type Analysis
-
-![Fraud Type Analysis](images/fraud-analysis.png)
-
-## 📉 Fraud Prediction Ratio
-
-![Fraud Prediction Ratio](images/prediction-ratio.png)
