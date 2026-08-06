@@ -1,0 +1,68 @@
+{% extends 'SProvider/Header.html' %}
+
+{% block researchblock %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<div class="container-fluid">
+
+
+    <div class="container">
+
+
+        <div class="row justify-content-center">
+
+
+            <div class="col-md-8">
+
+
+                <h2 class="title">
+
+                    Health Insurance Fraud Detection Result
+
+                </h2>
+
+
+                <hr>
+
+
+
+                <div class="tweettext">
+
+
+                    {% if result %}
+
+                        <p>
+                            {{ result }}
+                        </p>
+
+                    {% else %}
+
+                        <p class="empty-message">
+                            No prediction result available
+                        </p>
+
+                    {% endif %}
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

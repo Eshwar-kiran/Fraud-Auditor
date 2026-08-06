@@ -1,0 +1,142 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+<div class="container py-2">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-9">
+
+            <div class="glass-card">
+
+                <h2 class="text-center text-primary fw-bold mb-2">
+                    Trained & Tested Model Results
+                </h2>
+
+                <p class="text-center text-muted mb-4">
+                    Accuracy comparison of all trained Machine Learning models.
+                </p>
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered table-hover align-middle text-center">
+
+                        <thead class="table-primary">
+
+                            <tr>
+                                <th>Model Name</th>
+                                <th>Accuracy (%)</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                        {% for object in objs %}
+
+                            <tr>
+
+                                <td class="fw-semibold">
+                                    {{ object.names }}
+                                </td>
+
+                                <td class="text-success fw-bold">
+                                    {{ object.ratio }}
+                                </td>
+
+                            </tr>
+
+                        {% empty %}
+
+                            <tr>
+
+                                <td colspan="2">
+                                    No data available.
+                                </td>
+
+                            </tr>
+
+                        {% endfor %}
+
+                        </tbody>
+
+                    </table>
+                    <hr>
+
+                    <h3 class="text-center text-primary fw-bold mt-4">
+                        Model Accuracy Comparison
+                    </h3>
+
+                    <canvas id="accuracyChart"></canvas>
+
+
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                    <script>
+
+                    let modelNames = [];
+                    let accuracyValues = [];
+
+
+                    {% for obj in objs %}
+
+                    modelNames.push("{{obj.names}}");
+
+                    accuracyValues.push("{{obj.ratio}}");
+
+                    {% endfor %}
+
+
+                    new Chart(
+                    document.getElementById('accuracyChart'),
+                    {
+
+                    type:'bar',
+
+                    data:{
+
+                    labels:modelNames,
+
+                    datasets:[{
+
+                    label:'Accuracy %',
+
+                    data:accuracyValues
+
+                    }]
+
+                    },
+
+                    options:{
+
+                    responsive:true,
+
+                    plugins:{
+
+                    legend:{
+
+                    display:true
+
+                    }
+
+                    }
+
+                    }
+
+                    }
+
+                    );
+
+                    </script>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

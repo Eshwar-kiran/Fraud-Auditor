@@ -1,0 +1,167 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+<style>
+
+.table-responsive{
+    max-height:520px;
+    overflow-x:auto;
+    overflow-y:auto;
+}
+
+
+/* Horizontal + Vertical scrollbar */
+
+.table-responsive::-webkit-scrollbar{
+    width:10px;
+    height:10px;
+}
+
+
+.table-responsive::-webkit-scrollbar-track{
+    background:#eaf4fb;
+    border-radius:10px;
+}
+
+
+.table-responsive::-webkit-scrollbar-thumb{
+    background:#0077b6;
+    border-radius:10px;
+}
+
+
+.table-responsive::-webkit-scrollbar-thumb:hover{
+    background:#023e8a;
+}
+
+
+/* Keep table width for horizontal scrolling */
+
+.table-responsive table{
+    min-width:1400px;
+    white-space:nowrap;
+}
+
+
+/* Sticky table header */
+
+.table-responsive thead th{
+    position:sticky;
+    top:0;
+    z-index:2;
+    background:#0d6efd;
+    color:white;
+}
+
+</style>
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-12">
+
+            <div class="glass-card">
+
+                <h2 class="text-center text-primary fw-bold mb-2">
+                    Predicted Health Insurance Claim Frauds
+                </h2>
+
+                <p class="text-center text-muted mb-4">
+                    View all insurance claim records along with their fraud prediction results.
+                </p>
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered table-hover align-middle text-center">
+
+                        <thead class="table-primary">
+
+                            <tr>
+                                <th>RID</th>
+                                <th>Sum Insured</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Weight</th>
+                                <th>BMI</th>
+                                <th>Hereditary Disease</th>
+                                <th>Dependents</th>
+                                <th>Smoker</th>
+                                <th>City</th>
+                                <th>Blood Pressure</th>
+                                <th>Diabetes</th>
+                                <th>Regular Exercise</th>
+                                <th>Job Title</th>
+                                <th>Claim</th>
+                                <th>Prediction</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                        {% for object in list_objects %}
+
+                            <tr>
+
+                                <td>{{ object.RID }}</td>
+                                <td>{{ object.Sum_Insured }}</td>
+                                <td>{{ object.age }}</td>
+                                <td>{{ object.sex }}</td>
+                                <td>{{ object.weight }}</td>
+                                <td>{{ object.bmi }}</td>
+                                <td>{{ object.hereditary_diseases }}</td>
+                                <td>{{ object.no_of_dependents }}</td>
+                                <td>{{ object.smoker }}</td>
+                                <td>{{ object.city }}</td>
+                                <td>{{ object.bloodpressure }}</td>
+                                <td>{{ object.diabetes }}</td>
+                                <td>{{ object.regular_ex }}</td>
+                                <td>{{ object.job_title }}</td>
+                                <td>{{ object.claim }}</td>
+
+                                <td>
+
+                                    {% if object.Prediction == "Fraud Detection" %}
+
+                                        <span class="badge bg-danger fs-6">
+                                            Fraud
+                                        </span>
+
+                                    {% else %}
+
+                                        <span class="badge bg-success fs-6">
+                                            No Fraud
+                                        </span>
+
+                                    {% endif %}
+
+                                </td>
+
+                            </tr>
+
+                        {% empty %}
+
+                            <tr>
+
+                                <td colspan="16">
+                                    No Prediction Records Found.
+                                </td>
+
+                            </tr>
+
+                        {% endfor %}
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

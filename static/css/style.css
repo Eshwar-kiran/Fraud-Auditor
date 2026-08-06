@@ -1,0 +1,1081 @@
+/* ======================================
+   Healthcare Fraud Detection
+   Fixed One-Page Layout
+======================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:auto;
+    font-family:'Segoe UI',sans-serif;
+    background:#eef5fb;
+    color:#333;
+}           
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    height:70px;
+    background:linear-gradient(90deg,#0F4C81,#1565C0);
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.navbar-brand{
+    font-size:24px;
+    font-weight:700;
+    color:#fff !important;
+}
+
+.nav-btn{
+    text-decoration:none;
+    margin-left:12px;
+    padding:8px 20px;
+    border-radius:25px;
+    background:#fff;
+    color:#1565C0;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-btn:hover{
+    background:#FFC107;
+    color:#222;
+}
+
+.active{
+    background:#0dcaf0;
+    color:#fff;
+}
+
+.provider{
+    background:#28a745;
+    color:#fff;
+}
+
+.provider:hover{
+    background:#218838;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:calc(100vh - 150px);
+    overflow:hidden;
+}
+
+.overlay{
+    height:100%;
+    overflow:hidden;
+}
+
+.hero .container{
+    height:100%;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.92);
+    display:flex;
+    align-items:center;
+}
+
+/* ================= IMAGE ================= */
+
+.hero-image{
+    width:100%;
+    max-width:320px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+    transition:.4s;
+}
+
+.hero-image:hover{
+    transform:translateY(-12px) scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+/* ================= CONTENT CARD ================= */
+
+/* Keep card centered */
+.row{
+    min-height:100%;
+    align-items:center;
+}
+
+.glass-card{
+    background:rgba(255,255,255,.95);
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+    transition:.3s;
+    margin:auto;
+}
+
+/* Remove moving effect */
+.glass-card:hover{
+    transform:none;
+    box-shadow:0 15px 35px rgba(0,119,255,.20);
+}
+
+.glass-card h1{
+    font-size:34px;
+    color:#1565C0;
+    margin-bottom:10px;
+}
+
+.glass-card h4{
+    font-size:20px;
+    color:#666;
+    margin-bottom:18px;
+}
+
+.glass-card p{
+    font-size:15px;
+    line-height:1.7;
+    text-align:justify;
+    color:#555;
+    margin-bottom:10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    height:80px;
+    background:linear-gradient(90deg,#0F4C81,#1565C0);
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+footer h4{
+    font-size:18px;
+    margin:0;
+}
+
+footer p{
+    font-size:13px;
+    margin:2px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    body{
+        overflow:auto;
+    }
+
+    .hero{
+        height:auto;
+    }
+
+    .overlay{
+        padding:40px 0;
+    }
+
+    .hero-image{
+        max-width:260px;
+        margin-bottom:25px;
+    }
+
+    .glass-card{
+        margin-top:20px;
+    }
+
+    footer{
+        height:auto;
+        padding:20px;
+    }
+}
+/* ==========================================
+   LOGIN PAGE
+========================================== */
+
+.login-glass{
+    max-width:600px;
+    margin:auto;
+    padding:35px;
+}
+
+.login-glass h1{
+    font-size:36px;
+    color:#1565C0;
+    margin-bottom:8px;
+}
+
+.login-glass h4{
+    font-size:20px;
+    color:#666;
+    margin-bottom:15px;
+}
+
+.login-glass p{
+    font-size:15px;
+    color:#555;
+    line-height:1.7;
+    margin-bottom:22px;
+}
+
+/* Inputs */
+
+.login-input{
+    width:100%;
+    height:50px;
+    border:1px solid #d8d8d8;
+    border-radius:12px;
+    padding:12px 15px;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.login-input:focus{
+    border-color:#0072ff;
+    box-shadow:none;
+    outline:none;
+}
+
+/* Login Button */
+
+.login-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#0072ff,#00c6ff);
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,114,255,.25);
+}
+
+/* Register Link */
+
+.register-link{
+    text-align:center;
+    margin-top:20px;
+    font-size:16px;
+    color:#555;
+}
+
+.register-link a{
+    color:#0072ff;
+    text-decoration:none;
+    font-weight:600;
+    margin-left:2px;
+    transition:.3s;
+}
+
+.register-link a:hover{
+    color:#0056d6;
+    text-decoration:underline;
+}
+
+/* Make Login Card Smaller */
+
+.login-glass{
+    max-width:560px;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .login-glass{
+        margin-top:20px;
+        padding:25px;
+    }
+
+    .login-glass h1{
+        font-size:30px;
+    }
+
+    .login-glass h4{
+        font-size:18px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .login-glass{
+        padding:20px;
+    }
+
+    .login-glass h1{
+        font-size:26px;
+    }
+
+    .login-glass h4{
+        font-size:17px;
+    }
+
+    .login-input{
+        height:46px;
+    }
+
+}
+/* ================= REGISTER PAGE ================= */
+
+.hero{
+    height:calc(100vh - 150px);
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    background:rgba(255,255,255,.92);
+}
+
+/* Register Card */
+
+.register-card{
+    max-width:900px;
+    height: auto;
+    margin:auto;
+    padding:15px;
+    border-radius:20px;
+    background:#fff;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+/* Disable Hover */
+
+.register-card:hover{
+    transform:none;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+/* Headings */
+
+.register-card h1{
+    font-size:32px;
+    color:#1565C0;
+    margin-bottom:5px;
+}
+
+.register-card h4{
+    font-size:16px;
+    color:#666;
+    margin-bottom:0px;
+}
+
+.register-card p{
+    font-size:14px;
+    color:#555;
+    margin-bottom:5px;
+}
+
+/* Inputs */
+
+.register-input{
+    height:46px;
+    border-radius:12px;
+    border:1px solid #d8d8d8;
+    padding:10px 14px;
+    font-size:15px;
+    transition:border-color .3s;
+}
+
+.register-input:focus{
+    border-color:#1565C0;
+    box-shadow:none;
+    outline:none;
+}
+
+/* Textarea */
+
+textarea.register-input{
+    height:50px;
+    resize:none;
+}
+
+/* Select */
+
+select.register-input{
+    cursor:pointer;
+}
+
+/* Reduce spacing */
+
+.register-card .mb-3{
+    margin-bottom:8px !important;
+}
+
+/* Register Button */
+
+.register-btn{
+    width:100%;
+    padding:8px;
+    border:none;
+    border-radius:20px;
+    background:linear-gradient(90deg,#0072ff,#00c6ff);
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.register-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,114,255,.25);
+}
+
+/* Login Link */
+
+.register-link{
+    
+    margin-top:16px;
+}
+
+.register-link p{
+    margin:0;
+    text-align:center;
+    color:#555;
+    font-size:15px;
+}
+
+.register-link a{
+    color:#1565C0;
+    text-decoration:none;
+    font-weight:600;
+    margin-left:4px;
+}
+
+.register-link a:hover{
+    text-decoration:underline;
+    color: #1565C0;
+    font-weight: 700;
+}
+
+/* Success Message */
+
+.alert{
+    margin-top:15px;
+    border-radius:10px;
+    text-align:center;
+}
+
+/* Image */
+
+.hero-image{
+    max-width:320px;
+    width:100%;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    body{
+        overflow:auto;
+    }
+
+    .hero{
+        height:auto;
+    }
+
+    .overlay{
+        padding:40px 0;
+    }
+
+    .hero-image{
+        max-width:250px;
+        margin-bottom:25px;
+    }
+
+    .register-card{
+        margin-top:10px;
+        padding:10px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .register-card h1{
+        font-size:26px;
+    }
+
+    .register-card h4{
+        font-size:18px;
+    }
+
+    .register-input{
+        height:44px;
+        font-size:14px;
+    }
+
+    textarea.register-input{
+        height:40px;
+    }
+
+}
+/* ================= PREDICTION PAGE ================= */
+
+.prediction-card{
+    max-width:1100px;
+    margin:auto;
+    padding:35px;
+}
+
+.prediction-card h2{
+    color:#1565C0;
+    font-weight:700;
+}
+
+.prediction-input{
+    height:48px;
+    border-radius:12px;
+    border:1px solid #d8d8d8;
+}
+
+.prediction-input:focus{
+    border-color:#1565C0;
+    box-shadow:none;
+}
+
+label{
+    font-weight:600;
+    margin-bottom:6px;
+    color:#444;
+}
+
+.predict-btn{
+    background:linear-gradient(90deg,#0072ff,#00c6ff);
+    color:#fff;
+    border:none;
+    border-radius:12px;
+    padding:13px;
+    font-size:18px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.predict-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(0,114,255,.25);
+}
+
+.prediction-result{
+    background:#e9f7ef;
+    border-left:6px solid #28a745;
+    border-radius:12px;
+    padding:18px;
+    font-size:20px;
+    font-weight:600;
+}
+/* ================= REMOTE USER HEADER ================= */
+
+.dashboard-section{
+
+    min-height:calc(100vh - 70px);
+
+    background:url("../images/bg.jpg") center/cover no-repeat;
+
+}
+
+.dashboard-overlay{
+
+    min-height:calc(100vh - 70px);
+
+    background:rgba(255,255,255,.93);
+
+    padding:30px 0;
+
+}
+
+.dashboard-title{
+
+    margin-bottom:35px;
+
+}
+
+.dashboard-title h1{
+
+    color:#1565C0;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.dashboard-title p{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+/* User Cards */
+
+.user-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+/* Optional table styling */
+
+table{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+table th{
+
+    background:#1565C0;
+
+    color:#fff;
+
+}
+
+table td{
+
+    vertical-align:middle;
+
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .dashboard-title h1{
+
+        font-size:30px;
+
+    }
+
+}
+/* ================= PROFILE PAGE ================= */
+
+.profile-card{
+    max-width:850px;
+    margin:auto;
+    padding:35px;
+}
+
+.profile-avatar{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.profile-card h2{
+    color:#1565C0;
+    font-weight:700;
+    margin-top:15px;
+}
+
+.profile-table{
+    margin-top:20px;
+}
+
+.profile-table th{
+    width:220px;
+    background:#1565C0;
+    color:#fff;
+    padding:15px;
+    border:none;
+}
+
+.profile-table td{
+    background:#f8fbff;
+    color:#333;
+    padding:15px;
+    border:none;
+    font-weight:500;
+}
+
+.profile-table tr{
+    border-bottom:8px solid #fff;
+}
+
+@media(max-width:768px){
+
+    .profile-card{
+        padding:20px;
+    }
+
+    .profile-avatar{
+        width:90px;
+        height:90px;
+    }
+
+    .profile-table th{
+        width:140px;
+    }
+
+}
+/* ================= SERVICE PROVIDER NAVBAR ================= */
+
+.navbar-nav .nav-link{
+
+    color:#fff !important;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    margin:0 6px;
+
+    transition:.3s;
+
+}
+
+.navbar-nav .nav-link:hover{
+
+    color:#FFD54F !important;
+
+}
+
+.navbar-nav{
+
+    gap:4px;
+
+}
+/* ================= MODEL RESULT PAGE ================= */
+
+.glass-card{
+    background:rgba(255,255,255,.95);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.table{
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.table thead th{
+    background:#1565C0 !important;
+    color:#fff;
+    border:none;
+    font-size:17px;
+}
+
+.table tbody td{
+    padding:15px;
+    vertical-align:middle;
+    font-size:16px;
+}
+
+.table tbody tr:hover{
+    background:#f5f9ff;
+}
+
+.table td{
+    border:1px solid #dee2e6;
+}
+/* ================= VIEW REMOTE USERS ================= */
+
+.table-responsive{
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.table{
+    background:#fff;
+    margin-bottom:0;
+}
+
+.table thead th{
+    background:#1565C0 !important;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    border:none;
+    padding:14px;
+}
+
+.table tbody td{
+    vertical-align:middle;
+    font-size:15px;
+    padding:14px;
+}
+
+.table tbody tr:hover{
+    background:#eef6ff;
+}
+
+.table td,
+.table th{
+    border:1px solid #dee2e6;
+}
+
+.glass-card{
+    background:rgba(255,255,255,.96);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+/* ================= PREDICTION TABLE ================= */
+
+.table-responsive{
+    background:#fff;
+    border-radius:15px;
+    overflow:auto;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.table{
+    margin-bottom:0;
+    white-space:nowrap;
+}
+
+.table thead th{
+    background:#1565C0 !important;
+    color:#fff;
+    border:none;
+    font-size:15px;
+    font-weight:600;
+    padding:14px;
+}
+
+.table tbody td{
+    padding:12px;
+    vertical-align:middle;
+    font-size:14px;
+}
+
+.table tbody tr:hover{
+    background:#eef6ff;
+}
+
+.badge{
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.bg-danger{
+    background:#dc3545 !important;
+}
+
+.bg-success{
+    background:#28a745 !important;
+}
+/* ================= FRAUD RATIO PAGE ================= */
+
+.table-responsive{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.table{
+    margin-bottom:0;
+}
+
+.table thead th{
+    background:#1565C0 !important;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    padding:15px;
+    border:none;
+}
+
+.table tbody td{
+    padding:15px;
+    vertical-align:middle;
+    font-size:15px;
+}
+
+.table tbody tr:hover{
+    background:#eef6ff;
+}
+
+.badge{
+    padding:8px 16px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+.bg-danger{
+    background:#dc3545 !important;
+}
+
+.bg-success{
+    background:#28a745 !important;
+}
+
+.glass-card{
+    background:rgba(255,255,255,.96);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+/*================ MODEL ACCURACY PAGE ================*/
+
+.glass-card{
+    background:rgba(255,255,255,.96);
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.glass-card h2{
+    color:#1565C0;
+    font-weight:700;
+}
+
+.glass-card p{
+    color:#666;
+    font-size:15px;
+}
+
+.table-responsive{
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.table{
+    margin-bottom:0;
+    background:#fff;
+}
+
+.table thead th{
+    background:#1565C0 !important;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    padding:16px;
+    border:none;
+}
+
+.table tbody td{
+    padding:15px;
+    vertical-align:middle;
+    font-size:15px;
+}
+
+.table tbody tr:nth-child(even){
+    background:#f8fbff;
+}
+
+.table tbody tr:hover{
+    background:#e9f4ff;
+    transition:.3s;
+}
+
+.text-success{
+    color:#28a745 !important;
+    font-size:17px;
+}
+
+.fw-semibold{
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+    .glass-card{
+        padding:20px;
+    }
+
+    .glass-card h2{
+        font-size:24px;
+    }
+
+    .table thead th,
+    .table tbody td{
+        font-size:13px;
+        padding:10px;
+    }
+
+}
+/* ==============================
+   Likeschart Page Styles
+============================== */
+.glass-card{
+
+    background:rgba(255,255,255,0.85);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.5);
+
+}
+.glass-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,0.18);
+
+}
+#chartContainer{
+
+    width:100%;
+    height:500px;
+    margin-top:25px;
+    background:white;
+    border-radius:18px;
+    padding:15px;
+}
+@media(max-width:768px){
+    .glass-card{
+
+        padding:20px;
+
+    }
+    #chartContainer{
+
+        height:350px !important;
+
+    }
+}
+/* ================= ACCURACY CHART ================= */
+
+#accuracyChart{
+
+    max-height:250px;
+
+    margin-top:20px;
+
+}

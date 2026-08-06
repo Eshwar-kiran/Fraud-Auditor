@@ -1,0 +1,89 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+            <div class="glass-card">
+
+                <h2 class="text-center text-primary fw-bold mb-2">
+                    Health Insurance Claim Fraud Ratio
+                </h2>
+
+                <p class="text-center text-muted mb-4">
+                    Summary of predicted fraud and non-fraud claim percentages.
+                </p>
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered table-hover align-middle text-center">
+
+                        <thead class="table-primary">
+
+                            <tr>
+                                <th>Fraud Type</th>
+                                <th>Ratio</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            {% for object in objs %}
+
+                            <tr>
+
+                                <td class="fw-semibold">
+
+                                    {% if object.names == "Fraud Detection" %}
+
+                                        <span class="badge bg-danger fs-6">
+                                            {{ object.names }}
+                                        </span>
+
+                                    {% else %}
+
+                                        <span class="badge bg-success fs-6">
+                                            {{ object.names }}
+                                        </span>
+
+                                    {% endif %}
+
+                                </td>
+
+                                <td class="fw-bold text-primary">
+                                    {{ object.ratio }}
+                                </td>
+
+                            </tr>
+
+                            {% empty %}
+
+                            <tr>
+
+                                <td colspan="2">
+                                    No Data Available
+                                </td>
+
+                            </tr>
+
+                            {% endfor %}
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
