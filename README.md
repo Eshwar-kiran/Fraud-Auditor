@@ -1,7 +1,5 @@
 # 🏥 Healthcare Insurance Claim Fraud Detection Using Machine Learning
 
-## 📖 Overview
-
 Healthcare insurance fraud is a major challenge for insurance providers, leading to significant financial losses and increased operational costs. This project presents a **Machine Learning-based Healthcare Insurance Claim Fraud Detection System** that predicts whether an insurance claim is **Fraudulent** or **Legitimate**.
 
 Developed using **Python**, **Django**, and **Scikit-learn**, the application provides an intuitive web interface where users can submit healthcare claim details and receive instant fraud predictions. A dedicated Service Provider module enables model training, prediction analysis, visualization, and report generation.
